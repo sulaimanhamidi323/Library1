@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home </title>
+  <link rel="icon" type="image/x-icon" href="icon/logofavicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vocational College Tawau Library</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <img src="image/logo.webp" alt="Library Logo" class="logo"/>
+        Vocational College Tawau Library
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Resources ▼</a>
+            <div class="dropdown-content">
+              <a href="services.html">User Services</a>
+              <a href="tools.html">Educational Tools</a>
+              <a href="events.html">Events</a>
+              <a href="catalog.html">Online Catalog</a>
+              <a href="aboutme.html">About Me</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  <meta charset="UTF-8">
+  <title>My Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="icon/logofavicon.ico">
+  </header>
+  <main class="container section-main">
+    <h1>Welcome to Vocational College Tawau Library</h1>
+    <p>A space where knowledge is sown to brighten the future.</p>
+    <a href="news.html" class="btn">See Latest News & Announcements</a>
+  </main>
+<div class="slider-container">
+  <div class="slider">
+    <img src="image/read.png" class="slide active" alt="Reading Challenge">
+    <img src="image/story.png" class="slide" alt="Storytelling Session">
+    <img src="image/workshop.png" class="slide" alt="Workshop">
+    <img src="image/review.png" class="slide" alt="Book Review Contest">
+  </div>
+  <div class="slider-controls">
+    <button onclick="plusSlides(-1)">&#10094;</button>
+    <button onclick="plusSlides(1)">&#10095;</button>
+  </div>
+</div>
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+function showSlide(n) {
+  slides.forEach((s, i) => s.style.display = i === n ? 'block' : 'none');
+}
+function plusSlides(n) {
+  slideIndex = (slideIndex + n + slides.length) % slides.length;
+  showSlide(slideIndex);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(slideIndex);
+});
+</script>
+<style>
+.slider-container { max-width: 450px; margin: 2em auto; position: relative; }
+.slider img { display: none; width: 100%; border-radius: 12px; }
+.slider img.active { display: block; }
+.slider-controls { text-align: center; margin-top: 0.5em; }
+.slider-controls button { background: #7f4be3; color: #fff; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 1.5em; cursor: pointer; margin: 0 8px;}
+.slider-controls button:hover { background: #ff5fa3; }
+</style>
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <b>School Resource Centre’s Website ©2025 Copyright. All Rights Reserved, Powered By HTML<br>Best browser viewed using Google Chrome</b>
+      <p style="margin: 0 0 6px; font-size: .98rem;">
+      <b>This website is for educational purposes (IMS458)</b>
+    </div>
+  </footer>
+</body>
+</html>
